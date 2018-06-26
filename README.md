@@ -1,16 +1,13 @@
-**注意：** 由于aberic大大一个人精力和人力有限，特利用业余时间结合自身的一些搭建经验总结出这篇详细使用说明，如果疏漏或者不妥之处，望海涵。
-<br>
+**注意：** 本文档是以fabric官方1.0版本中e2e_cli单机版作为启动环境，没有做其他个人更改。同时为了调试和测试方便，关闭了tls。
+<br/>
 # Fabric Net Server 详细说明文档 [![fabric-sdk image](https://img.shields.io/badge/made%20by-aberic-orange.svg)](http://www.cnblogs.com/aberic/)
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/aberic/fabric-sdk-container/blob/master/LICENSE)
 [![fabric-sdk image](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/aberic/)
 [![Join the chat at https://gitter.im/fabric-net-server/Lobby](https://badges.gitter.im/fabric-net-server/Lobby.svg)](https://gitter.im/fabric-net-server/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br><br>
-本项目目前提供一套Fabric网络后台服务，包括对已经在Fabric网络中创建好的org、peer、channel、chaincode等进行网络新增，并基于已经新增成功的内容提供[REST API](https://github.com/aberic/fabric-net-server/blob/master/API_DEMO.md)服务，目前仅支持智能合约的执行、查询以及溯源功能，未来计划支持后台动态加入通道、安装合约、实例化合约等基于[fabric-sdk-java](https://github.com/hyperledger/fabric-sdk-java)已有接口的实现。
+  由于aberic大大一个人精力和人力有限，作为追随者，根据自身的搭建调试经验，编写此文档，贡献一些力量。
 <br><br>
-本项目开发环境和框架大致有：IntelliJ IDEA、Maven、JDK8+、spring-boot、thrift、thymeleaf以及Docker等。具体实践可使用项目中提供的Docker镜像部署，也可以自定义源码二次开发。
-<br><br>
-由于个人人力实在有限，后面的工程和工作量会逐步变大变多，在保证个人工作顺利的情况下，会将大部分精力都投入到本项目中。
-<br><br>
+
 ### 功能说明
 可能有部分刚刚接触的人对这个本sdk中的联盟，组织等概念有一些混乱，这里再次根据作者的思路进行一个详细的说明。
 #### 联盟(league)

@@ -69,7 +69,7 @@ services:
 2、edge中SERVICE_IP和SERVICE_PORT两个变量的值取决于service的部署情况，理论上可以在一台物理机中部署即可。
 <br>
 3、yaml启动需要指定镜像版本号，或tag镜像版本号为latest。
-4、SERVICE_IP 配置的时候避免使用127.0.0.1,aberic说可能会导致项目无法启动。
+4、SERVICE_IP 配置的时候避免使用127.0.0.1,博主说可能会导致项目无法启动。
 <br><br>
 
 ## 添加流程截图说明
